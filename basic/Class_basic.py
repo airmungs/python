@@ -29,7 +29,7 @@ print(p)
 안녕하세요, 28살 희문님!
 
 짝수만 출력
-self.x%2==0
+x = [1, 2, 3, 4, 5, 6, 7, 8]
 '''
 
 class introduce:
@@ -62,3 +62,13 @@ x = [1, 2, 3, 4, 5, 6, 7, 8]
 numbering = Numbering(x)
 
 print(numbering.get_even_numbers())
+print(Numbering.get_even_numbers(x))
+
+
+class NumberingMethod:
+    @classmethod
+    def get_even_numbers(cls, numbers):
+        return [n for n in numbers if n % 2 == 0]
+
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+print(NumberingMethod.get_even_numbers(x))
